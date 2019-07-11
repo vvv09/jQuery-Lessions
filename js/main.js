@@ -1,9 +1,9 @@
 $(document).ready(function(){ // best-practice скрипт будет работать только когда страница полностью загрузится
 
-	//СЕЛЕКТОРЫ
+	//03_ СЕЛЕКТОРЫ
 
 
-	$('h1').addClass('selected'); //по тэгу
+	$('h1').addClass('center'); //по тэгу
 
 	$('#second-list-item').addClass('selected'); //по id (!селекторы по id считаются самыми быстрыми)
 
@@ -35,5 +35,79 @@ $(document).ready(function(){ // best-practice скрипт будет рабо�
 	$('a[href!="http://google.ru"]').addClass('yellowback'); //все ссылки c аттр href НЕ равному "http://google.ru"
 	$('a[href^="http"]').addClass('blue'); //все ссылки c аттр href значение которого начинается на "http"
 	$('a[href$=".ru"]').addClass('blue'); //все ссылки c аттр href значение которого заканчивается на ".ru"
+
+
+	//07_ АНИМАЦИЯ
+	$('#customWidth').on('click', function(){
+		$('#textBox').animate({'width':'200px'}, 2000);
+		$('#textBox').animate({'height':'400px'}, 1000);
+	});
+
+	$('#customOpacity').on('click', function(){
+		$('#textBox').animate({'opacity':'0'}, 2000);
+	});
+
+	
+	$('#hide').on('click', function(){
+		$('#textBox').hide('slow'); //или значение в миллисекундах без кавычек
+	});
+
+	$('#show').on('click', function(){
+		$('#textBox').show('fast'); //или значение в миллисекундах без кавычек
+	});
+
+	$('#hideAndShow').on('click', function(){
+		$('#textBox').hide(3000).delay(1000).show(2000);
+	});
+
+
+	$('#fadeOut').on('click', function(){
+		$('#textBox').fadeOut(2000);
+	});
+
+	$('#fadeIn').on('click', function(){
+		$('#textBox').fadeIn();
+	});
+
+	$('#fadeToggle').on('click', function(){
+		$('#textBox').fadeToggle(2000);
+	});
+
+
+	$('#slideUp').on('click', function(){
+		$('#textBox').slideUp(2000);
+	});
+
+	$('#slideDown').on('click', function(){
+		$('#textBox').slideDown(2000);
+	});
+
+	$('#slideToggle').on('click', function(){
+		$('#textBox').slideToggle();
+	});
+
+	//08_Работа с формой val
+
+ 	$('#formSum').on('submit', function(event){ // При нажатии на кнопку submit
+  		event.preventDefault(); // Чтобы страница не обновлялась
+  
+  		var numberOne, numberTwo, result;
+
+  		// Берем значения из input
+		numberOne = $('#numberOne').val(); 
+		numberTwo = $('#numberTwo').val();
+
+		if(isNaN(numberOne)){
+			numberOne = 0;
+		}
+  
+		if(isNaN(numberTwo)){
+			numberTwo = 0;
+		}
+
+  		result = +numberOne + +numberTwo; // Сложение двух чисел 
+
+  		$('#sumResult').text(result); // Вывод суммы
+ 	});
 
 });

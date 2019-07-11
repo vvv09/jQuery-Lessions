@@ -9,9 +9,11 @@
 
 <body>
 
-	<img src="http://webcademy.ru/img/logo/logo.svg" alt="Логотип" class="logo">
+	<img src="http://webcademy.ru/img/logo/logo.svg" alt="Логотип" class="logo" width="400" height="200">
 
-	<h1 id="top-header"> jQuery - селекторы </h1>
+	<hr/>
+
+	<h1 id="top-header">3 Селекторы </h1>
 
 	<h2 class="header-2">Заголовок 2-го уровня</h2>
 	<p>Текст в абзаце</p>
@@ -38,6 +40,51 @@
 	 <p><a href="#">Ссылка #</a></p>
 	 <p><a href="http://google.ru">Ссылка на google</a></p>
 	</div>
+
+	<hr/>
+
+	<h1>7 Анимация</h1>
+
+	<button id="customWidth">Изменить ширину</button>
+	<button id="customOpacity">Изменить прозрачность</button>
+	<br><br>
+	<button id="hide">Скрыть</button>
+	<button id="show">Показать</button>
+	<button id="hideAndShow">Скрыть и Показать</button>
+	<br><br>
+	<button id="fadeOut">fade - скрыть</button>
+	<button id="fadeIn">fade - показать</button>
+	<button id="fadeToggle">fade - Скрыть / Показать</button>
+	<br><br>
+	<button id="slideUp">slide - скрыть</button>
+	<button id="slideDown">slide - показать</button>
+	<button id="slideToggle">slide - Скрыть / Показать</button>
+	
+
+	<div style="width:900px; height:200px; background:#096; position:relative;"> <div id="textBox" style="margin:auto; width:300px; height:100px; background:#CC0; position:absolute;"></div> </div>
+
+	<hr/>
+	<h1>Методы - Форма</h1>
+	<h2>Форма и атрибуты</h2>
+	
+	<form id="formSum" style="background: red; padding-left: 10px;">
+		<label for="numberOne">Число 1</label><br>
+		<input type="text" id="numberOne" autofocus>
+
+		<br>
+
+		<label for="numberTwo">Число 2</label><br>
+		<input type="text" id="numberTwo">
+
+		<br><br>
+		 
+		<input type="submit" value="Сумма">
+		<p><b>Сумма: <span id="sumResult" class="sumResult"></span></b></p>
+	</form>
+
+
+	<hr/>
+
 
 	<script type="text/javascript" src="libs/jquery/jquery-3.4.1.min.js"></script> 
 	<script type="text/javascript" src="js/main.js"></script>

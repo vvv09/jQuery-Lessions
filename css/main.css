@@ -16,15 +16,28 @@ margin-bottom: 10px;
  color: #057F13;
 }
 
+.textBox {
+	border: all;
+}
+
 .blue {
- color: blue;
+ 	color: blue;
 }
 
 .blueback {
- background: blue;
+ 	background: blue;
 }
 
 .yellowback {
- background: yellow;
+ 	background: yellow;
 }
+
+.redback {
+ 	background: red;
+}
+
+.center {
+	text-align: center;
+}
+
 
