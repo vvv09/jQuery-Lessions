@@ -1,19 +1,19 @@
 body {
- margin:10px;
- padding:10px;
+	margin:10px;
+	padding:10px;
 }
 
 .logo {
-margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .selected {
- border: 5px solid #EC1919;
- padding: 5px; 
+	border: 5px solid #EC1919;
+	padding: 5px; 
 }
 
 .green {
- color: #057F13;
+	color: #057F13;
 }
 
 .textBox {
@@ -40,4 +40,87 @@ margin-bottom: 10px;
 	text-align: center;
 }
 
+/* Car */
 
+.imageHolder {
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+	cursor: pointer;
+}
+
+.colorsSelector {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.colorSandBeach {
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background: #696856;
+}
+
+.colorDarkSky {
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background: #171E3A;
+}
+
+.colorBlueWinter {
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background: #525866;
+}
+
+.colorGrayMeteor {
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background: #535353;
+}
+
+.colorSilverCopper {
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background: #92917D;
+}
+
+.colorTrueBlack {
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background: #0E0E0E;
+}
+
+.colorClassicGreen {
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background: #4F645B;
+}
+
+.colorRedGarnet {
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background: #6C0910;
+}
+
+.colorSilverRain {
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background: #798088;
+}
+
+.colorNobleWhite {
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background: #AEAEAE;
+}
