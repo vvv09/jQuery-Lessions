@@ -112,7 +112,12 @@ $(document).ready(function() { // best-practice скрипт будет рабо
 
  	//9 Ибображеине и атрибуты
 
- 	var srcValue = $('#imageHolder img').attr('src');
+ 	var $carImg = $('#imageHolder img'); // $ просто для указания на то, что  в переменной - jQuery
 
-
+	$('#colorsSelector .colorItem').on('click', function(){
+		var imgPath = $(this).attr('data-img-path');
+		$carImg.fadeOut(50, function(){
+			$carImg.attr('src', imgPath).fadeIn(50);
+		});	
+	});
 });
