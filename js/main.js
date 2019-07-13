@@ -110,7 +110,7 @@ $(document).ready(function() { // best-practice скрипт будет рабо
   		$('#sumResult').text(result); // Вывод суммы
  	});
 
- 	//9 Ибображеине и атрибуты
+ 	//9_Ибображеине и атрибуты
 
  	var $carImg = $('#imageHolder img'); // $ просто для указания на то, что  в переменной - jQuery
 
@@ -120,4 +120,52 @@ $(document).ready(function() { // best-practice скрипт будет рабо
 			$carImg.attr('src', imgPath).fadeIn(50);
 		});	
 	});
+
+	//10_РАбота с текстом
+	
+	$('#textBox1').text('Новый Текст'); //вставляем текст, теги воспринимаются как текст
+	$('#textBox2').html('<h4>Новый Текст</h4>'); //вставляем текст, теги воспринимаются как теги
+
+	$newContent = $( //это обычная строка, но благодаря $(2-му) с ней можно будет работать как с объектом jQuery
+		'<h4>Заголовок</h4>' +
+		'<p>Абзац с текстом</p>' +
+		'<ul>' +
+		'<li>Пункт 1</li>' +
+		'<li>Пункт 2</li>' +
+		'<li>Пункт 3</li>' +
+		'</ul>'
+	);
+
+	$newContent.hide(); // - из-за $
+	$('#textBox3').html($newContent);
+	$newContent.fadeIn(10000); // - из-за $
+
+	$('#textBox4').prepend('<p>.prepend() - добавляет <b>разметку внутрь и в начало</b> элемента</p>');
+	$('#textBox4').append('<p>.append() - добавляет <b>разметку внутрь и в конец</b> элемента</p>');
+
+	$('#textBox4').before('<p>.before() - добавляет текст и/или разметку <b>перед элементом</b></p>');
+	$('#textBox4').after('<p>.after() - добавляет текст и/или разметку <b>после элемента</b></p>');
+
+	$('#textNoWrap').wrap('<b></b>'); //обернули изначальный текст тегом <b> !
+	$('#textNoWrap').on('click', function(){
+		$(this).unwrap(); //и отменяем оборачивание
+	});
+
+	$('#textBox1').on('click', function(){
+		$(this).empty(); // удоляет содержимое блока
+	});
+
+	$('#textBox2').on('click', function(){
+		$(this).remove(); // удоляет блок полностью
+	});
+
+	$('#textBox4').on('click', function(){
+		var $cloneElement = $(this).clone();
+		alert('Клонироваие!!!');
+		$cloneElement.attr('style', 'color: red');
+		$(this).after($cloneElement);
+	});
+
+
+
 });
