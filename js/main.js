@@ -36,6 +36,9 @@ $(document).ready(function() { // best-practice скрипт будет рабо
 	$('a[href^="http"]').addClass('blue'); //все ссылки c аттр href значение которого начинается на "http"
 	$('a[href$=".ru"]').addClass('blue'); //все ссылки c аттр href значение которого заканчивается на ".ru"
 
+	//5_События https://jquery-docs.ru/category/events/
+
+
 
 	//07_ АНИМАЦИЯ
 	$('#customWidth').on('click', function(){
